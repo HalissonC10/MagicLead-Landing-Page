@@ -431,6 +431,9 @@
         .testimonials {
             padding: 4rem 0;
             background: #0a0a0a;
+             max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         .testimonials-container {
@@ -885,25 +888,71 @@
             color: rgba(255,255,255,0.5);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding-top: 100px; /* Espaço para o header fixo */
-            }
 
-            .hero-text h1 {
-                font-size: 2.5rem;
-                margin-top: 1.5rem; /* Espaço adicional para o título */
-                margin-bottom: 1.5rem;
-            }
+/* --- REGRAS DE RESPONSIVIDADE PARA TELEMÓVEIS --- */
+@media (max-width: 768px) {
+    /* --- REGRAS PARA A SECÇÃO INICIAL (HERO) --- */
 
-            .hero-text p {
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-                line-height: 1.6;
-            }
+body, html {
+        overflow-x: hidden; /* evita overflow horizontal */
+    }
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-section-vertical) 0;
+        width: 100vw; /* garante que a largura não ultrapasse a viewport */
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: var(--spacing-section-vertical) 0;
+        gap: 2rem;
+        width: 100%; /* garante que não ultrapasse */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Redução mais agressiva do título */
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Redução mais agressiva do parágrafo */
+        max-width: 95%; /* Usa percentagem para ser mais flexível */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-actions {
+        flex-direction: column; /* Força os botões a empilhar na vertical */
+    }
+
+    .hero-visual {
+        display: none; 
+    }}
+
+    .testimonials-container {
+        padding: 0 1rem; /* reduz padding lateral */
+        max-width: 100%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* força 1 card por linha no mobile */
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem; /* ajusta o tamanho do card */
+    }
+
+    .demo-cta {
+        padding: 2rem; /* ajusta padding para caber no mobile */
+        width: 100%; /* garante que não ultrapasse */
+        box-sizing: border-box;
+    }
+
+    /* --- FIM DAS REGRAS PARA A SECÇÃO HERO --- *
 
             /* Menu Hamburguer */
             .nav-links {
@@ -990,6 +1039,7 @@
                 flex-direction: column;
                 gap: 1.2rem;
                 margin-top: 2rem;
+                
             }
 
             .primary-btn,
@@ -1029,7 +1079,7 @@
             .section-header {
                 margin-bottom: 3rem;
             }
-        }
+        
 
         /* Ajuste adicional para telas muito pequenas */
         @media (max-width: 480px) {
@@ -1128,3 +1178,6 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+       

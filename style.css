@@ -468,12 +468,13 @@ nav .logo {
             padding: 0 2rem;
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    justify-content: center; /* centraliza os cards */
+}
 
         .testimonial-card {
             background: rgba(255,255,255,0.05);
@@ -572,6 +573,8 @@ nav .logo {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+
+            
         }
 
         .pricing-grid {
@@ -590,6 +593,7 @@ nav .logo {
             padding: 2rem;
             position: relative;
             transition: all 0.3s ease;
+            
         }
 
         .pricing-card:hover {
@@ -676,6 +680,7 @@ nav .logo {
             text-align: center;
             font-weight: 600;
             transition: all 0.3s ease;
+            
         }
 
         .plan-btn.primary {
@@ -687,6 +692,7 @@ nav .logo {
             background: rgba(255,255,255,0.1);
             color: white;
             border: 1px solid rgba(255,255,255,0.2);
+            justify-content: space-between; 
         }
 
         .plan-btn:hover {
@@ -1182,8 +1188,12 @@ section {
   .pricing-grid,
   .features-grid,
   .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    justify-content: center; /* centraliza os cards */
+}
 
   .process-steps {
     display: flex;
@@ -1366,6 +1376,7 @@ section {
   .features-container {
     max-width: 1400px;
     margin: 0 auto;
+    
   }
 
   .amount { font-size: clamp(2.2rem, 3vw, 3rem); }

@@ -1203,12 +1203,7 @@ section {
 }
 
 /* ====== TABLET (769px — 1200px) ====== */
-@media (max-width: 1024px) {
-    /* Botão hamburguer sempre visível até o desktop */
-.menu-toggle {
-  display: block;
-}
-
+@media (min-width: 769px) and (max-width: 1200px) {
   .pricing-grid,
   .features-grid,
   .testimonials-grid {
@@ -1226,15 +1221,10 @@ section {
   .hero-text p { font-size: 1.1rem; max-width: 500px; }
 }
 
-
 /* ====== MOBILE (<=768px) — menu, hero e overflow S8 fix ====== */
 @media (max-width: 768px) {
   /* scroll offset para header mobile (usar var se precisar) */
   html { scroll-padding-top: var(--header-height-mobile); }
-  /* Botão hamburguer sempre visível até o desktop */
-.menu-toggle {
-  display: block;
-}
 
   /* mais topo no hero para evitar corte por header fixo */
   .hero {
@@ -1487,4 +1477,3 @@ nav { position: relative; }
 
 /* dica: se o header mobile ainda cortar o conteúdo, aumente --header-height-mobile para 96-110px */
 
-    }}

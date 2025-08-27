@@ -26,37 +26,44 @@
             animation: gradientShift 15s ease infinite;
         }
 
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px);
-            transition: all 0.3s ease;
-        }
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 80px;
+  display: flex;
+  justify-content: center; /* centraliza o conteúdo do header */
+  align-items: center;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .hamburger-menu {
-  margin-left: auto;
-  z-index: 10;
+header nav {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;   /* largura mínima */
-  height: 40px;  /* altura mínima */
+  justify-content: center; /* centraliza a logo */
 }
+
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Removendo o posicionamento absoluto */
+}
+
+header .logo img {
+  max-height: 55px;
+  height: auto;
+  max-width: 270px;
+}
+
+/* Links escondidos no mobile */
+
+
 
 .logo {
      
@@ -71,10 +78,8 @@
     
 }
 
+/* Removendo a posição absoluta da logo no nav */
 nav .logo {
-    position: absolute;
-    left: 25%;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -87,7 +92,8 @@ nav .logo {
 }
 
 .logo img {
-   width: 2500px;
+   max-height: 55px;
+   width: auto; /* Ajustando a largura para auto */
     height: auto;
     display: block;
     margin: 0 auto; /* centraliza horizontalmente */
@@ -920,200 +926,6 @@ nav .logo {
             color: rgba(255,255,255,0.5);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-
-            /* Menu Hamburguer */
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: rgba(0, 0, 0, 0.98);
-                backdrop-filter: blur(20px);
-                padding: 2rem;
-                flex-direction: column;
-                gap: 1.5rem;
-                z-index: 999;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                font-size: 1.1rem;
-                padding: 0.8rem 0;
-                text-align: center;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-
-            .nav-links a:last-child {
-                border-bottom: none;
-                background: linear-gradient(135deg, #A855F7, #7C3AED);
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 50px;
-                margin: 1rem 0;
-                font-weight: 600;
-                box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
-                border: 2px solid rgba(255,255,255,0.3);
-            }
-
-            .nav-links a:last-child:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
-            }
-
-            .hamburger-menu {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-                cursor: pointer;
-                padding: 0.5rem;
-            }
-
-            .hamburger-menu span {
-                width: 25px;
-                height: 3px;
-                background: white;
-                border-radius: 2px;
-                transition: all 0.3s ease;
-            }
-
-            /* Prevenir scroll quando menu está aberto */
-            body.menu-open {
-                overflow: hidden;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-actions {
-                display: flex;
-                flex-direction: column;
-                gap: 1.2rem;
-                margin-top: 2rem;
-            }
-
-            .primary-btn,
-            .secondary-btn {
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .step-arrow {
-                display: none;                
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .guarantee-points {
-                gap: 1.5rem;
-            }
-
-            .stats-bar {
-                grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
-            }
-
-            /* Aumento geral do espaçamento */
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .section-header {
-                margin-bottom: 3rem;
-            }
-        }
-
-        
-
-        /* WhatsApp floating button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: #25D366;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1.4);
-                opacity: 0;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Scroll animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-      /* ================== FIX FINAL REESCRITO (cole no final do arquivo) ================== */
-
-/* variáveis (ajuste os valores se necessário) */
 :root {
   --header-height: 72px;         /* header desktop */
   --header-height-mobile: 88px;  /* header mobile — AUMENTE se o header for alto */
@@ -1183,24 +995,56 @@ section {
   gap: 2rem;
 }
 
-/* ====== DESKTOP GRANDE (>=1201px) ====== */
-@media (min-width: 1201px) {
+/* ====== DESKTOP (>= 769px) - UNIFICADO ====== */
+@media (min-width: 769px) {
+  /* HEADER / NAV */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza o conteúdo do header */
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza a logo e os links */
+    width: 100%;
+  }
+
+  /* logo sempre centralizada */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0 auto; /* centraliza a logo */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: auto; /* empurra os links para a direita */
+  }
+
+  /* ====== GRIDS RESPONSIVOS (substitui o breakpoint 1201px) ====== */
   .pricing-grid,
   .features-grid,
   .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 2.2vw, 2rem);
     margin-bottom: 4rem;
-    justify-content: center; /* centraliza os cards */
-}
+    justify-content: center;
+  }
 
   .process-steps {
     display: flex;
     gap: 1rem;
     align-items: stretch;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .testimonial-card,
@@ -1210,14 +1054,31 @@ section {
     max-width: none;
     margin: 0;
   }
+
+  .pricing-grid { gap: clamp(1rem, 2.5vw, 2.5rem); }
+  .feature-card, .pricing-card { padding: clamp(.75rem, .8vw, 1.25rem); }
 }
 
 /* ====== TABLET (769px — 1200px) ====== */
 @media (max-width: 1024px) {
-    /* Botão hamburguer sempre visível até o desktop */
-.menu-toggle {
-  display: block;
-}
+  header {
+    min-height: 80px; /* Ajuste este valor para a altura desejada */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza horizontal */
+  }
+
+  header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centraliza */
+    align-items: center;
+  }
+
+  header .logo {
+    position: relative;
+    z-index: 1100;
+  }
 
   .pricing-grid,
   .features-grid,
@@ -1236,17 +1097,90 @@ section {
   .hero-text p { font-size: 1.1rem; max-width: 500px; }
 }
 
-
-/* ====== MOBILE (<=768px) — menu, hero e overflow S8 fix ====== */
+/* ===== MOBILE (até 768px) ===== */
 @media (max-width: 768px) {
-  /* scroll offset para header mobile (usar var se precisar) */
   html { scroll-padding-top: var(--header-height-mobile); }
-  /* Botão hamburguer sempre visível até o desktop */
-.menu-toggle {
-  display: block;
-}
 
-  /* mais topo no hero para evitar corte por header fixo */
+  header {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Nav como flex centrado + pseudo elementos para balancear */
+  header nav {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* logo central */
+    padding: 0 1rem;
+  }
+
+  /* cria "colunas" invisíveis para balancear centro real */
+  header nav::before,
+  header nav::after {
+    content: "";
+    flex: 1 1 0;
+    display: block;
+  }
+
+  /* logo no fluxo normal (centralizada pelo nav e pelos pseudo-eles) */
+  header .logo {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1100;
+    left: auto;
+    transform: none;
+  }
+
+  header .logo img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* MENU MOBILE: transformado em overlay absoluto à direita/embaixo do header */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding-top: calc(var(--header-height-mobile) + 12px);
+    background: rgba(0,0,0,0.98);
+    backdrop-filter: blur(18px);
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+    z-index: 1800;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+
+  .nav-links.active { display: flex; }
+
+  .nav-links a {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  /* se tiver um botão/ícone do menu que ocupa espaço à esquerda, posicione-o absoluto para não empurrar a logo */
+  .menu-toggle, .hamburger {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200;
+  }
+
+  /* HERO */
   .hero {
     padding-top: calc(var(--header-height-mobile) + 12px) !important;
     padding-bottom: 2.5rem;
@@ -1255,7 +1189,6 @@ section {
     box-sizing: border-box;
   }
 
-  /* hero empilha e centraliza */
   .hero-content {
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
@@ -1279,81 +1212,19 @@ section {
     line-height: 1.5;
   }
 
-  /* controle do menu mobile: fechado por padrão, abre só com .active */
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 0; /* começa do topo da viewport — garante que desça do topo */
-    left: 0;
-    right: 0;
-    height: 100vh;
-    padding-top: calc(var(--header-height-mobile) + 12px); /* conteúdo começa abaixo do header */
-    background: rgba(0,0,0,0.98);
-    backdrop-filter: blur(18px);
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow-y: auto;
-    z-index: 1800;
-    transition: transform .18s ease, opacity .18s ease;
-  }
-
-  /* quando seu JS adiciona .active, o menu aparece (overlay) */
-  .nav-links.active { display: flex; }
-
-  /* itens do menu ocupam largura total para melhor clique */
-  .nav-links a {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    box-sizing: border-box;
-    text-align: left;
-  }
-
-  /* previne centralização indesejada */
-  .nav-links, .nav-links * { align-self: stretch; }
-
-  /* mostra o hamburger no mobile (assume lógica JS) */
-  .hamburger-menu {
-    display: flex;
-    align-items: center;
-    gap: .35rem;
-    margin-left: auto;
-    z-index: 1900;
-    cursor: pointer;
-  }
-
-  /* quando ativo (vira X) */
-.hamburger-menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.active span:nth-child(2) {
-  opacity: 0; /* some com a linha do meio */
-}
-
-.hamburger-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-  /* forças grids a 1 coluna */
+  /* GRIDS em 1 coluna */
   .pricing-grid,
   .features-grid,
   .testimonials-grid,
-  .stats-bar {
-    grid-template-columns: 1fr !important;
-    gap: 1.25rem !important;
-  }
-
+  .stats-bar,
   .process-steps {
-    display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
   }
 
   .step-arrow { display: none !important; }
 
-  /* reduz deslocamento para badges/step-number */
+  /* Ajustes visuais */
   .pricing-card .popular-badge,
   .step-card .step-number {
     top: -8px !important;
@@ -1363,7 +1234,7 @@ section {
 
   .pricing-card, .step-card { padding-top: 2.2rem !important; }
 
-  /* garante que a logo não cause overflow */
+  /* evita overflow lateral */
   .logo, .logo img { max-width: 100% !important; margin-right: 0 !important; }
   .hero, .hero * { max-width: 100%; overflow-x: hidden; }
 }
@@ -1376,20 +1247,12 @@ section {
   .features-container {
     max-width: 1400px;
     margin: 0 auto;
-    
   }
 
   .amount { font-size: clamp(2.2rem, 3vw, 3rem); }
 }
 
-/* ====== LOGO & NAV: centraliza no desktop e volta pro fluxo no mobile ====== */
-
-/* referencia de posicionamento para logo absoluta */
-nav { position: relative; }
-
-
-
-/* aplica gradiente só se suportado — garante legibilidade */
+/* ====== LOGO & NAV ====== */
 @supports (-webkit-background-clip: text) {
   .logo .brand-text {
     background: linear-gradient(135deg, #A855F7, #7C3AED);
@@ -1399,103 +1262,39 @@ nav { position: relative; }
   }
 }
 
-/* Desktop: centraliza logo usando absolute sem separar imagem/texto */
-@media (min-width: 769px) {
-  .logo {
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 0.3rem;
-     width: 150px;   /* largura da área do container */
-    height: auto;   /* deixa altura proporcional */
+/* Header base */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 80px;
+  z-index: 1000;
+}
 
-  }
-
-.nav-links {
+header nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 2rem;          /* aumenta o espaço entre os links */
   align-items: center;
-  justify-content: flex-end;
-  flex: 1 1 auto;
-  min-width: 0;
-  padding-left: 3rem; /* aumenta o espaço da logo até o primeiro link */
+  justify-content: center; /* centraliza a logo e os links */
+  padding: 0 2rem;
 }
 
-  .hamburger-menu { display: none; }
+/* Logo */
+header .logo img {
+  max-height: 56px;
+  width: auto;
+  display: block;
 }
 
-/* Mobile: logo no fluxo, hamburger visível, menu controlado por .active */
-@media (max-width: 768px) {
-  .logo {
-    position: relative;
-    left: 0;
-    transform: none;
-    gap: 0.35rem;
-    padding-left: 0.6rem;
-    font-size: clamp(0.95rem, 4vw, 1.25rem);
-  }
-
-  .logo img { 
-    height: auto;
-    width: 200px; 
-  }
-
-  .nav-links { display: none; }
-  .nav-links.active { display: flex; }
-
-  .hamburger-menu { display: flex; }
+/* Links */
+.nav-links {
+  gap: 2rem;
+  align-items: center;
+  padding-right: 16px;
 }
 
-/* proteções finais: evitar quebra do texto */
-.logo, .logo .brand-text { white-space: nowrap; overflow: visible; text-overflow: clip; }
 
-/* Transformações para o menu hamburguer em X */
-.hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transform-origin: center;
-}
 
-.hamburger-menu.active span:nth-child(2) {
-    opacity: 0; /* some com a linha do meio */
-}
 
-.hamburger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-    transform-origin: center;
-}
 
-/* Garantir que as transições funcionem */
-.hamburger-menu span {
-    transition: all 0.3s ease;
-}
-
-/* Melhorias para o menu mobile */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-        padding: 0.5rem;
-        z-index: 1001;
-        position: relative;
-    }
-    
-    .hamburger-menu span {
-        width: 25px;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-    }
-    
-    /* Garantir que o menu mobile funcione corretamente */
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-
-/* dica: se o header mobile ainda cortar o conteúdo, aumente --header-height-mobile para 96-110px */
-
-    }}

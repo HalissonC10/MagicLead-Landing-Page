@@ -1030,21 +1030,42 @@ section {
 
   /* ====== GRIDS RESPONSIVOS (substitui o breakpoint 1201px) ====== */
   .pricing-grid,
-  .features-grid,
   .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: clamp(1rem, 2.2vw, 2rem);
     margin-bottom: 4rem;
     justify-content: center;
+     
   }
+
+  .features-grid{
+         display: grid;
+    grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+    gap: clamp(1rem, 2.2vw, 2rem);
+    margin-bottom: 4rem;
+    justify-content: center;
+    
+  }
+
+  .feature-card {
+  display: flex;
+  flex-direction: column; /* mantém ícone + texto alinhados */
+  height: 100%; /* ocupa altura total da célula */
+}
 
   .process-steps {
     display: flex;
-    gap: 1rem;
-    align-items: stretch;
+    flex-wrap: nowrap;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .step-card {
+    flex: 1; /* garante mesmo tamanho */
+    min-width: 250px;
+    max-width: 300px;
+    
   }
 
   .testimonial-card,
@@ -1085,6 +1106,7 @@ section {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+     
   }
 
   .process-steps {
@@ -1220,6 +1242,7 @@ section {
   .process-steps {
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
+    
   }
 
   .step-arrow { display: none !important; }

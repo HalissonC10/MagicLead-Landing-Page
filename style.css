@@ -6,13 +6,13 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
             overflow-x: hidden;
-            background: #000;
+            background: linear-gradient(-135deg, rgb(46, 26, 71), rgb(46, 26, 71));
         }
-
+        
         /* Gradient Animation */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -21,7 +21,7 @@
         }
 
         .gradient-bg {
-            background: linear-gradient(-45deg, #8B5CF6, #A855F7, #9333EA, #7C3AED, #6D28D9, #5B21B6);
+            background: linear-gradient(135deg, #1a1a1a, #2d1b4e);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
@@ -35,7 +35,6 @@
   display: flex;
   justify-content: center; /* centraliza o conteúdo do header */
   align-items: center;
-  background: rgba(0,0,0,0.95);
   backdrop-filter: blur(20px);
   z-index: 1000;
 }
@@ -112,6 +111,7 @@ nav .logo {
         .nav-links a {
             color: #fff;
             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             transition: color 0.3s ease;
         }
@@ -127,6 +127,7 @@ nav .logo {
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
@@ -158,6 +159,7 @@ nav .logo {
         }
 
         .hero-text h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.5rem;
             font-weight: 900;
             line-height: 1.1;
@@ -173,6 +175,7 @@ nav .logo {
 
 
         .hero-text p {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
             color: rgba(255,255,255,0.95);
             margin-bottom: 2rem;
@@ -194,6 +197,7 @@ nav .logo {
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
@@ -217,6 +221,7 @@ nav .logo {
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
@@ -291,12 +296,14 @@ nav .logo {
         }
 
         .metric-value {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: #A855F7;
         }
 
         .metric-label {
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             color: rgba(255,255,255,0.7);
         }
@@ -359,6 +366,7 @@ nav .logo {
         }
 
         .stat-card .stat-number {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             font-weight: 800;
             color: #A855F7;
@@ -368,6 +376,7 @@ nav .logo {
 
         .stat-card .stat-label {
             color: rgba(255,255,255,0.8);
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
         }
 
@@ -402,29 +411,34 @@ nav .logo {
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 0.9rem;
         }
 
         .step-icon {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .step-card h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
 
         .step-card p {
             color: rgba(255,255,255,0.8);
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             line-height: 1.5;
         }
 
         .step-arrow {
             color: #A855F7;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: bold;
             align-self: center;
@@ -441,6 +455,7 @@ nav .logo {
 
         .guarantee-box h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -459,6 +474,7 @@ nav .logo {
 
         .guarantee-features span {
             color: #A855F7;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
         }
 
@@ -491,12 +507,14 @@ nav .logo {
         }
 
         .stars {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
 
         .testimonial-card p {
             color: rgba(255,255,255,0.9);
+            font-family: 'Montserrat', sans-serif;
             font-style: italic;
             line-height: 1.6;
             margin-bottom: 1.5rem;
@@ -509,6 +527,7 @@ nav .logo {
             color: white;
             padding: 0.3rem 1rem;
             border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 1rem;
@@ -521,6 +540,7 @@ nav .logo {
         }
 
         .avatar {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
         }
 
@@ -531,6 +551,7 @@ nav .logo {
 
         .testimonial-author span {
             color: rgba(255,255,255,0.7);
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
         }
 
@@ -549,12 +570,14 @@ nav .logo {
       .primary-btn.small {
             padding: 0.7rem 1.5rem;
     /* Aumentei o tamanho da fonte */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem; /* 16px */
         }
 
 
         .demo-cta h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
             text-align: center
@@ -571,8 +594,8 @@ nav .logo {
         /* Pricing Section */
         .pricing {
              padding: 1rem 0;
-            background: linear-gradient(135deg, #1a1a1a, #2d1b4e);
-            margin-top: 10px;
+            background: linear-gradient(135deg, rgb(69 52 52), rgb(45,27,78));
+            margin-top: 0px;
         }
 
         .pricing-container {
@@ -621,12 +644,14 @@ nav .logo {
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
         }
 
         .pricing-card h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
@@ -645,12 +670,14 @@ nav .logo {
 
         .currency {
             color: #A855F7;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
         }
 
         .amount {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 3rem;
             font-weight: 800;
             margin: 0 0.2rem;
@@ -658,11 +685,13 @@ nav .logo {
 
         .period {
             color: rgba(255,255,255,0.7);
+            font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
         }
 
         .leads-info {
             color: rgba(255,255,255,0.8);
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             margin-bottom: 2rem;
         }
@@ -674,6 +703,7 @@ nav .logo {
         .feature {
             color: rgba(255,255,255,0.9);
             margin-bottom: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
         }
 
@@ -684,6 +714,7 @@ nav .logo {
             border-radius: 10px;
             text-decoration: none;
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             transition: all 0.3s ease;
             
@@ -719,6 +750,7 @@ nav .logo {
 
         .guarantee-card h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -743,6 +775,7 @@ nav .logo {
 
         .guarantee-points span {
             color: #A855F7;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 0.9rem;
         }
@@ -762,6 +795,7 @@ nav .logo {
 
         .section-header h2 {
             font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             color:white;
             margin-bottom: 1rem;
@@ -771,6 +805,7 @@ nav .logo {
 
         .section-header p {
             margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             color: rgba(255,255,255,0.85);
             max-width: 700px;
@@ -808,10 +843,12 @@ nav .logo {
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
         }
 
         .feature-card h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
             font-weight: 700;
             color: white;
@@ -822,12 +859,13 @@ nav .logo {
             color: rgba(255,255,255,0.9);
             line-height: 1.7;
             font-size: 1.05rem;
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Stats Section */
         .stats {
             padding: 7rem 0;
-            background: linear-gradient(135deg, #A855F7, #7C3AED);
+            background: linear-gradient(135deg, #4B0082, #8c709d);
         }
 
         .stats-container {
@@ -845,6 +883,7 @@ nav .logo {
         }
 
         .stat-number {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
@@ -852,6 +891,7 @@ nav .logo {
         }
 
         .stat-label {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
             opacity: 0.95;
             font-weight: 500;
@@ -860,7 +900,6 @@ nav .logo {
         /* CTA Section */
         .cta-section {
             padding: 6rem 0;
-            background: #000;
             text-align: center;
         }
 
@@ -872,6 +911,7 @@ nav .logo {
 
         .cta-section h2 {
             margin-top: -3rem;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: 800;
             color: white;
@@ -879,6 +919,7 @@ nav .logo {
         }
 
         .cta-section p {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             color: rgba(255,255,255,0.9);
             margin-bottom: 2rem;
@@ -903,6 +944,7 @@ nav .logo {
 
         .footer-section h3 {
             color: white;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -1115,7 +1157,7 @@ section {
     gap: 1rem;
   }
 
-  .hero-text h1 { font-size: 2.8rem; }
+  .hero-text h1 { font-size: 2.8rem; font-family: 'Montserrat', sans-serif;}
   .hero-text p { font-size: 1.1rem; max-width: 500px; }
 }
 
@@ -1318,7 +1360,6 @@ header .logo img {
   align-items: center;
   padding-right: 16px;
 }
-
 
 
 

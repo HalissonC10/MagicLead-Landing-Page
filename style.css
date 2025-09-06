@@ -595,7 +595,7 @@ nav .logo {
         .pricing {
              padding: 1rem 0;
             background: linear-gradient(135deg, rgb(69 52 52), rgb(45,27,78));
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
         .pricing-container {
